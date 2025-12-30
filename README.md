@@ -20,3 +20,4 @@ Rather than focusing on advanced machine learning, the project emphasizes:
 
 The Chinook dataset represents a digital media store, including customer purchases, employee operations, and media content such as artists, albums, and tracks. The ER diagram highlights the relational structure that supports transactional integrity and business rules.
 
+<img width="542" height="496" alt="image" src="https://github.com/user-attachments/assets/fe6295f9-3596-463d-a54e-a31d158694cf" />
