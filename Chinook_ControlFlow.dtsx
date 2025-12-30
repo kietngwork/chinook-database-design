@@ -1,0 +1,125 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/13/2024 2:11:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="GWTN141-10"
+  DTS:CreatorName="GWTN141-10\kietn"
+  DTS:DTSID="{CD6B0847-6BEA-4CD3-868C-BAD675E5CF27}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ControlFlow"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{52452060-2825-441B-BC60-78F40AA1AB67}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GWTN141-10\SQLEXPRESS.Chinook]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CCF1AED6-744C-4151-AD55-7770ECBF8FEF}"
+      DTS:ObjectName="GWTN141-10\SQLEXPRESS.Chinook">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=GWTN141-10\SQLEXPRESS;Initial Catalog=Chinook;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{CCF1AED6-744C-4151-AD55-7770ECBF8FEF}GWTN141-10\SQLEXPRESS.Chinook;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create invoice_insights Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Facilitate deeper analysis and understanding of customer purchasing behavior and sale trends"
+      DTS:DTSID="{088C51D7-F95E-49A7-8BBA-B6BBB401793E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create invoice_insights Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CCF1AED6-744C-4151-AD55-7770ECBF8FEF}"
+          SQLTask:SqlStatementSource="CREATE TABLE invoice_insights(&#xA;&#x9;InvoiceId INT PRIMARY KEY,&#xA;&#x9;CustomerID INT,&#xA;&#x9;InvoiceDate DATETIME,&#xA;&#x9;Total DECIMAL(10,2),&#xA;&#x9;BillingCity NVARCHAR(100));&#xA;&#x9;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Insert Data"
+      DTS:DTSID="{F0F422A3-3943-4ADD-A768-15CD0E5BE688}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert Data"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CCF1AED6-744C-4151-AD55-7770ECBF8FEF}"
+          SQLTask:SqlStatementSource="INSERT INTO invoice_insights (InvoiceId, CustomerID, InvoiceDate, Total, BillingCity)&#xA;SELECT &#xA;&#x9;i.InvoiceId,&#xA;&#x9;i.CustomerID,&#xA;&#x9;i.InvoiceDate,&#xA;&#x9;SUM(Quantity * UnitPrice) AS Total,&#xA;&#x9;i.BillingCity&#xA;FROM invoices i &#xA;JOIN invoice_items it ON i.InvoiceId = it.InvoiceId&#xA;GROUP BY i.InvoiceId, i.CustomerID, i.InvoiceDate, i.BillingCity" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{6652A99E-7224-4634-AD00-57A4692B591D}"
+      DTS:From="Package\Create invoice_insights Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Insert Data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="220,42.6666666666667"
+          Id="Package\Create invoice_insights Table"
+          TopLeft="166.874992540106,43.7894732034108" />
+        <NodeLayout
+          Size="132,42.6666666666667"
+          Id="Package\Insert Data"
+          TopLeft="213.12499047257,138.210524798265" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="277.999991506338,86.4561398700774">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.7543849281877"
+              Start="0,0"
+              End="0,44.2543849281877">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2543849281877" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
