@@ -17,3 +17,6 @@ Rather than focusing on advanced machine learning, the project emphasizes:
 ---
 
 ## 2. Data Structure & Initial Checks
+
+The Chinook dataset represents a digital media store, including customer purchases, employee operations, and media content such as artists, albums, and tracks. The ER diagram highlights the relational structure that supports transactional integrity and business rules.
+
