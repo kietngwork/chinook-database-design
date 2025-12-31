@@ -36,7 +36,7 @@ Overall performance is strong, with total sales of **2.3K** driven by **412 orde
 
 Below is the overview page from the Power BI dashboard, with additional examples included throughout the report. The entire interactive dashboard can be downloaded [here](https://github.com/kietngwork/chinook-sales-dashboard/blob/main/Chinook%20Dashboard.pbix).
 
-<img width="1325" height="749" alt="image" src="https://github.com/user-attachments/assets/005563c8-fff7-49b4-8bcd-49656db94a15" />
+<img width="1278" height="723" alt="image" src="https://github.com/user-attachments/assets/41e008e4-44c9-4571-a45f-4521aabf2f4e" />
 
 **Sales Trends**
 - **Sales remain relatively stable over time**, indicating a mature and predictable revenue pattern rather than volatility.
