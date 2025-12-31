@@ -45,6 +45,9 @@ Below is the overview page from the Power BI dashboard, with additional examples
 - A **dip toward November** followed by a **mild December recovery** points to **short-term seasonal softness rather than structural decline**.
 - Growth is **driven primarily by order volume**, not higher spend per order, highlighting opportunities to **optimize Average Order Value**.
 
+<img width="668" height="261" alt="image" src="https://github.com/user-attachments/assets/db958fc7-df4b-4ae8-9b0c-a931f846a87d" />
+
+
 
 
 
