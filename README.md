@@ -25,3 +25,12 @@ The Chinook dataset represents a digital media store, including customer purchas
 The ER diagram highlights key one-to-many and many-to-many relationships enforced through primary and foreign keys to support transactional integrity.
 
 [View business rules](https://github.com/kietngwork/chinook-database-design/blob/main/Chinook%20Business%20Rules.pdf)
+
+---
+
+## 3. Executive Summary
+
+**Overview of Findings**
+
+
+
