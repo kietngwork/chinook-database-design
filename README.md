@@ -57,6 +57,17 @@ Below is the overview page from the Power BI dashboard, with additional examples
 
 <img width="660" height="269" alt="image" src="https://github.com/user-attachments/assets/08160a7a-35b3-4c7c-8581-761ed5643f60" />
 
+**Recommendations:**
+Based on the uncovered insights, the following recommendations have been provided:
+### Recommendations (Data-Driven)
+
+- **Increase Average Order Value (AOV)**, as total sales of **2.3K** are driven by **412 orders** rather than higher spend per transaction, with AOV currently at **5.7**.
+- **Reduce reliance on the U.S. market**, which contributes the largest share of total sales, by scaling proven offerings in **Canada and France**, which together account for a meaningful share of total orders.
+- **Exploit peak seasonality**, as sales perform strongest during **June–August**, by scheduling major campaigns and releases in this period.
+- **Offset late-year softness**, particularly in **November**, where sales dip before recovering in **December**, through targeted discounts or bundled offers.
+- **Diversify the media mix**, as **MPEG audio represents ~84% of total sales**, creating concentration risk in format dependency.
+- **Leverage high-AOV niches**, where certain countries and genres generate fewer orders but higher revenue per order, indicating potential for premium pricing.
+- **Sustain operational stability**, since items per order and average net sales remain consistent across months, supporting low-risk optimization initiatives.
 
 
 
