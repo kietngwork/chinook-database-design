@@ -5,7 +5,7 @@ Digital media platforms generate large volumes of transactional data from custom
 
 This project uses the **Chinook Digital Media Store dataset** to demonstrate how sound **data modeling** and **data warehouse design** can transform raw transactional data into a structure optimized for analytics and business intelligence.
 
-Rather than focusing on advanced machine learning, the project emphasizes:
+The project emphasizes:
 - Relational data modeling principles  
 - Referential integrity and business rules  
 - Star and snowflake schema design  
