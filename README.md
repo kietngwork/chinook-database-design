@@ -58,7 +58,7 @@ Below is the overview page from the Power BI dashboard, with additional examples
 
 **Recommendations:**
 Based on the uncovered insights, the following recommendations have been provided:
-### Recommendations (Data-Driven)
+### Recommendations 
 
 - **Increase Average Order Value (AOV)**, as total sales of **2.3K** are driven by **412 orders** rather than higher spend per transaction, with AOV currently at **5.7**.
 - **Reduce reliance on the U.S. market**, which contributes the largest share of total sales, by scaling proven offerings in **Canada and France**, which together account for a meaningful share of total orders.
